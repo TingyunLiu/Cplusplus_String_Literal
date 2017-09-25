@@ -1,0 +1,10 @@
+u8"abc"
+"abc  123"
+""
+"\\\'\?\"\v"
+"\0\12\3456\789abc"
+"\xa\xcCdE0123456789\xfg"
+"abc"123"
+"       "
+
+"Above line is an empty input line, print warning"

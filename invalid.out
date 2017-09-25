@@ -1,0 +1,6 @@
+'U8"123"' : 'U8' no -- extraneous characters '"123"'
+' "123"' : ' ' no -- extraneous characters '"123"'
+'"\cs343"' : '"\c' no -- extraneous characters 's343"'
+'"\9"' : '"\9' no -- extraneous characters '"'
+'"\x"' : '"\x"' no
+'"abc123' : '"abc123' no

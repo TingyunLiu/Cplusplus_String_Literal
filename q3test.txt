@@ -1,4 +1,3 @@
-# Cplusplus_String_Literal
 
 +--------+-----------------------------------------------------------------------+
 | Test # | Purpose of Tests                                                      |
@@ -163,51 +162,51 @@
 
 PART A
 ------
-1 @ubuntu1604-008% ./stringliteral valid.in invalid.in
-2 Usage: ./stringliteral [infile-file]
-3 @ubuntu1604-008% ./stringliteral doesnotexist
-4 Error! Could not open input file "doesnotexist"
-5 @ubuntu1604-008% chmod a-r valid.in
-6 @ubuntu1604-008% ./stringliteral valid.in
-7 Error! Could not open input file "valid.in"
+  1 @ubuntu1604-008% ./stringliteral valid.in invalid.in
+  2 Usage: ./stringliteral [infile-file]
+  3 @ubuntu1604-008% ./stringliteral doesnotexist
+  4 Error! Could not open input file "doesnotexist"
+  5 @ubuntu1604-008% chmod a-r valid.in
+  6 @ubuntu1604-008% ./stringliteral valid.in
+  7 Error! Could not open input file "valid.in"
 
 PART B
 ------
-1 @ubuntu1604-008% cat valid.in
-2 u8"abc"
-3 "abc  123"
-4 ""
-5 "\\\'\?\"\v"
-6 "\0\12\3456\789abc"
-7 "\xa\xcCdE0123456789\xfg"
-8 "abc"123"
-9 
-10 "Above line is an empty input line, print warning"
-11 @ubuntu1604-008% ./stringliteral valid.in
-12 'u8"abc"' : 'u8"abc"' yes
-13 '"abc  123"' : '"abc  123"' yes
-14 '""' : '""' yes
-15 '"\\\'\?\"\v"' : '"\\\'\?\"\v"' yes
-16 '"\0\12\3456\789abc"' : '"\0\12\3456\789abc"' yes
-17 '"\xa\xcCdE0123456789\xfg"' : '"\xa\xcCdE0123456789\xfg"' yes
-18 '"abc"123"' : '"abc"' yes -- extraneous characters '123"'
-19 '' : Warning! Blank line.
-20 '"Above line is an empty input line, print warning"' : '"Above line is an empty input line, print warning"' yes
+  1 @ubuntu1604-008% cat valid.in
+  2 u8"abc"
+  3 "abc  123"
+  4 ""
+  5 "\\\'\?\"\v"
+  6 "\0\12\3456\789abc"
+  7 "\xa\xcCdE0123456789\xfg"
+  8 "abc"123"
+  9 
+ 10 "Above line is an empty input line, print warning"
+ 11 @ubuntu1604-008% ./stringliteral valid.in
+ 12 'u8"abc"' : 'u8"abc"' yes
+ 13 '"abc  123"' : '"abc  123"' yes
+ 14 '""' : '""' yes
+ 15 '"\\\'\?\"\v"' : '"\\\'\?\"\v"' yes
+ 16 '"\0\12\3456\789abc"' : '"\0\12\3456\789abc"' yes
+ 17 '"\xa\xcCdE0123456789\xfg"' : '"\xa\xcCdE0123456789\xfg"' yes
+ 18 '"abc"123"' : '"abc"' yes -- extraneous characters '123"'
+ 19 '' : Warning! Blank line.
+ 20 '"Above line is an empty input line, print warning"' : '"Above line is an empty input line, print warning"' yes
 
 PART C
 ------
-1 @ubuntu1604-008% cat invalid.in
-2 U8"123"
-3  "123"
-4 "\cs343"
-5 "\9"
-6 "\x"
-7 "abc123
-8 @ubuntu1604-008% ./stringliteral invalid.in
-9 'U8"123"' : 'U8' no -- extraneous characters '"123"'
-10 ' "123"' : ' ' no -- extraneous characters '"123"'
-11 '"\cs343"' : '"\c' no -- extraneous characters 's343"'
-12 '"\9"' : '"\9' no -- extraneous characters '"'
-13 '"\x"' : '"\x"' no
-14 '"abc123' : '"abc123' no
+  1 @ubuntu1604-008% cat invalid.in
+  2 U8"123"
+  3  "123"
+  4 "\cs343"
+  5 "\9"
+  6 "\x"
+  7 "abc123
+  8 @ubuntu1604-008% ./stringliteral invalid.in
+  9 'U8"123"' : 'U8' no -- extraneous characters '"123"'
+ 10 ' "123"' : ' ' no -- extraneous characters '"123"'
+ 11 '"\cs343"' : '"\c' no -- extraneous characters 's343"'
+ 12 '"\9"' : '"\9' no -- extraneous characters '"'
+ 13 '"\x"' : '"\x"' no
+ 14 '"abc123' : '"abc123' no
 

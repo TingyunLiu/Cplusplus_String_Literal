@@ -1,0 +1,10 @@
+'u8"abc"' : 'u8"abc"' yes
+'"abc  123"' : '"abc  123"' yes
+'""' : '""' yes
+'"\\\'\?\"\v"' : '"\\\'\?\"\v"' yes
+'"\0\12\3456\789abc"' : '"\0\12\3456\789abc"' yes
+'"\xa\xcCdE0123456789\xfg"' : '"\xa\xcCdE0123456789\xfg"' yes
+'"abc"123"' : '"abc"' yes -- extraneous characters '123"'
+'"       "' : '"       "' yes
+'' : Warning! Blank line.
+'"Above line is an empty input line, print warning"' : '"Above line is an empty input line, print warning"' yes
